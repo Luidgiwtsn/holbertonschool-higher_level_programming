@@ -1,0 +1,26 @@
+Module: 3-say_my_name.py
+------------------------
+
+Description:
+    This module defines a function that prints a full name.
+
+Function:
+    say_my_name(first_name, last_name="") -> None
+
+Description:
+    Prints "My name is <first_name> <last_name>".
+
+Arguments:
+    first_name (str): The first name.
+    last_name (str, optional): The last name. Defaults to "".
+
+Raises:
+    TypeError: If first_name is not a string.
+    TypeError: If last_name is not a string.
+
+Example:
+    >>> say_my_name("John", "Doe")
+    My name is John Doe
+
+    >>> say_my_name("Alice")
+    My name is Alice

@@ -1,0 +1,36 @@
+This is the test file for the text_indentation function.
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Hello. My name is ChatGPT? Yes: it is.")
+Hello.
+<BLANKLINE>
+My name is ChatGPT?
+<BLANKLINE>
+Yes:
+<BLANKLINE>
+it is.
+
+>>> text_indentation("  Leading and trailing  :  spaces should be stripped.  ")
+Leading and trailing:
+<BLANKLINE>
+spaces should be stripped.
+
+>>> text_indentation("No punctuation here")
+No punctuation here
+
+>>> text_indentation("Wait... What?  Really:  ")
+Wait.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+What?
+<BLANKLINE>
+Really:
+<BLANKLINE>
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+TypeError: text must be a string

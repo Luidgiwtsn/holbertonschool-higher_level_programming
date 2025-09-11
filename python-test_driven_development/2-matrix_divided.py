@@ -43,4 +43,8 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    return [[round(el / div, 2) for el in row] for row in matrix]
+    new_matrix = []
+    for row in matrix:
+        new_row = [round(element / div, 2) for element in row]
+        new_matrix.append(new_row)
+    return new_matrix

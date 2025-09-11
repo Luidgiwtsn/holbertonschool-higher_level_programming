@@ -1,5 +1,3 @@
-Test file for 2-matrix_divided module
-=====================================
 Import the function:
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 

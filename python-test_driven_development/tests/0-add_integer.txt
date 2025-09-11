@@ -1,29 +1,27 @@
-Test file for 0-add_integer module
-===================================Import the function:
-    >>> add_integer = __import__('0-add_integer').add_integerTest basic integer addition:
-    >>> add_integer(1, 2)
-    3Test with negative numbers:
-    >>> add_integer(100, -2)
-    98Test with default parameter:
-    >>> add_integer(2)
-    100Test with float conversion:
-    >>> add_integer(100.3, -2)
-    98Test with both floats:
-    >>> add_integer(100.3, -2.7)
-    98Test error cases - string as second parameter:
-    >>> add_integer(4, "School")
-    Traceback (most recent call last):
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1, 2)
+3
+>>> add_integer(100, -2)
+98
+>>> add_integer(2)
+100
+>>> add_integer(100.3, -2)
+98
+>>> add_integer(100.3, -2.7)
+98
+>>> add_integer(4, "School")
+Traceback (most recent call last):
     ...
-    TypeError: b must be an integerTest error cases - None as first parameter:
-    >>> add_integer(None)
-    Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer(None)
+Traceback (most recent call last):
     ...
-    TypeError: a must be an integerTest error cases - string as first parameter:
-    >>> add_integer("hello", 5)
-    Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer("hello", 5)
+Traceback (most recent call last):
     ...
-    TypeError: a must be an integerTest edge cases - zeros:
-    >>> add_integer(0, 0)
-    0Test edge cases - negative numbers:
-    >>> add_integer(-5, -3)
-    -8
+TypeError: a must be an integer
+>>> add_integer(0, 0)
+0
+>>> add_integer(-5, -3)
+-8

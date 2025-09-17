@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module defines a Rectangle class to represent a rectangle
+This defines a Rectangle class to represent a rectangle
 with width and height attributes, and methods to calculate area
 and perimeter.
 """
@@ -11,8 +11,8 @@ class Rectangle:
 
     Provides methods to compute area and perimeter.
     """
-    
-    def__init__(self, width=0, height=0):
+
+    def __init__(self, width=0, height=0):
         """
         Initialize a new Rectangle instance.
 
@@ -22,7 +22,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
-        
+
     @property
     def width(self):
         """
@@ -32,7 +32,7 @@ class Rectangle:
             int: The width of the rectangle.
         """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """
@@ -50,7 +50,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
-        
+
     @property
     def height(self):
         """
@@ -60,7 +60,7 @@ class Rectangle:
             int: The height of the rectangle.
         """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """
@@ -78,7 +78,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-        
+
     def area(self):
         """
         Compute the area of the rectangle.
@@ -87,7 +87,7 @@ class Rectangle:
             int: The area (width * height).
         """
         return self.__width * self.__height
-    
+
     def perimeter(self):
         """
         Compute the perimeter of the rectangle.

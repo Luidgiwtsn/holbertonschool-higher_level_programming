@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""This module defines a Rectangle class that represents a geometric rectangle.
+"""
+This module defines a Rectangle class that represents a geometric rectangle.
 It includes attributes for width and height with proper validation.
 """
 

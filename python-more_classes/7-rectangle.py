@@ -104,7 +104,7 @@ class Rectangle:
         line = str(self.print_symbol) * self.width
         return "\n".join([line] * self.height)
 
-    def __pepr__(self):
+    def __repr__(self):
         """
         Returns a string that can be used to recreate this rectangle.
 

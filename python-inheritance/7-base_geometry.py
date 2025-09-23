@@ -12,9 +12,8 @@ class BaseGeometry:
     def area(self):
         """
         Calculate the area of the geometry.
-        Raises:
-            Exception: If the method is not implemented.
         """
+
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):

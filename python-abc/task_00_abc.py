@@ -13,7 +13,7 @@ class Animal(ABC):
     """
     Abstract base class representing an animal.
     """
-
+    @abstractmethod
     def sound(self):
         """
         Abstract method to be implemented by subclasses.

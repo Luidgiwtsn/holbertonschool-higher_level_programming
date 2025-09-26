@@ -91,5 +91,5 @@ def shape_info(shape):
     Args:
         shape: Any object with area() and perimeter() methods (duck typing).
     """
-    print("Area:", shape.area())
-    print("Perimeter:", shape.perimeter())
+    print(f"Area: {shape.area()}")
+    print(f"Perimeter: {shape.perimeter()}")

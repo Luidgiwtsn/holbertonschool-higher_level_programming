@@ -83,6 +83,7 @@ class Rectangle(Shape):
         """
         return 2 * (self.width + self.height)
 
+
 def shape_info(shape):
     """
     Display the area and perimeter of the shape passed in.

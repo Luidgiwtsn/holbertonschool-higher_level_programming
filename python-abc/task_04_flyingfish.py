@@ -62,4 +62,4 @@ class FlyingFish(Fish, Bird):
         """
         Prints the habitat of a flying fish.
         """
-        print("The flying fish livs both in water and the sky!")
+        print("The flying fish lives both in water and the sky!")

@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Module qui définit une fonction pour afficher le dernier chiffre d'un nombre."""
+"""Module qui définit une fonction pour afficher le dernier
+chiffre d'un nombre."""
 
 
 def print_last_digit(number):

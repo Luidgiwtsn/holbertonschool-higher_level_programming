@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Module qui définit une fonction pour afficher une chaîne en majuscules.
 """

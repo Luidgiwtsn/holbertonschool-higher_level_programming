@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Print numbers from 0 to 99 separated by ', '.
-Numbers are printed in ascending order with two digits.
+Display numbers from 0 to 99 separated by ', '.
+Numbers are displayed in ascending order with two digits.
 Only one loop and no extra variables are used.
 """
 

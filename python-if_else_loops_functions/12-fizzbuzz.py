@@ -9,7 +9,8 @@ Chaque élément est suivi d'un espace.
 
 
 def fizzbuzz():
-    """Affiche les nombres de 1 à 100 en appliquant les substitutions FizzBuzz."""
+    """Affiche les nombres de 1 à 100 en appliquant
+    les substitutions FizzBuzz."""
     for i in range(1, 101):
         if i % 3 == 0 and i % 5 == 0:
             print("FizzBuzz", end=" ")

@@ -6,7 +6,8 @@ Module qui définit une fonction pour afficher une chaîne en majuscules.
 
 def uppercase(str):
     """
-    Affiche une chaîne de caractères en majuscules suivie d'un retour à la ligne.
+    Affiche une chaîne de caractères en majuscules
+    suivie d'un retour à la ligne.
 
     Args:
         str (str): La chaîne à convertir en majuscules.

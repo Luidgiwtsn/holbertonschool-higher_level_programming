@@ -8,7 +8,8 @@ afficher le résultat.
 
 
 def add_arguments():
-    """Additionne tous les arguments de ligne de commande et affiche le résultat.
+    """Additionne tous les arguments de ligne de commande et
+    affiche le résultat.
 
     Cette fonction récupère tous les arguments de ligne de commande (excluant
     le nom du script), les convertit en entiers, les additionne, et affiche

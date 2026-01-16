@@ -5,7 +5,7 @@ Module principal pour tester les fonctions de calcul.
 Ce module importe et utilise les fonctions arithmétiques de base
 du module .
 """
-__import__("calculator_1")
+
 
 if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div

@@ -1,0 +1,78 @@
+===============================
+Test pour le module 0-add_integer
+===============================
+
+Importation de la fonction:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Test avec deux entiers positifs:
+    >>> add_integer(1, 2)
+    3
+
+Test avec un entier positif et un négatif:
+    >>> add_integer(100, -2)
+    98
+
+Test avec un seul argument (utilise la valeur par défaut):
+    >>> add_integer(2)
+    100
+
+Test avec des flottants:
+    >>> add_integer(100.3, -2)
+    98
+
+Test avec un flottant négatif:
+    >>> add_integer(5, -10.5)
+    -5
+
+Test avec deux flottants:
+    >>> add_integer(1.5, 2.7)
+    3
+
+Test avec zéro:
+    >>> add_integer(0, 0)
+    0
+
+Test d'erreur - deuxième argument n'est pas un nombre:
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Test d'erreur - premier argument est None:
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Test d'erreur - premier argument est une chaîne:
+    >>> add_integer("hello", 5)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Test d'erreur - les deux arguments sont des chaînes:
+    >>> add_integer("hello", "world")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Test d'erreur - deuxième argument est None:
+    >>> add_integer(5, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Test d'erreur - liste en argument:
+    >>> add_integer([1, 2], 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Test avec de très grands nombres:
+    >>> add_integer(1000000, 2000000)
+    3000000
+
+Test avec des flottants très petits:
+    >>> add_integer(0.1, 0.2)
+    0

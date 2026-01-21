@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 """
 Module pour additionner deux entiers.
-
-Ce module fournit une fonction pour additionner deux nombres
-après les avoir convertis en entiers s'ils sont des flottants.
 """
 
 

@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+"""Module contenant une fonction pour trouver la différence symétrique."""
+
 def only_diff_elements(set_1, set_2):
     """Retourne un ensemble d'éléments présents dans
     un seul des deux ensembles.

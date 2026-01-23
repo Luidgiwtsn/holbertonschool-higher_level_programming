@@ -1,2 +1,0 @@
-ChatGPT - Introduction
-Python - if/else, loops, functions

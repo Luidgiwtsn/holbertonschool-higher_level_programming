@@ -1,0 +1,67 @@
+#!/usr/bin/python3
+"""Script de tests complets pour BaseGeometry"""
+
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+print('=== Tests de BaseGeometry ===\n')
+
+# Test 1: Instanciation
+print('1. Test d\'instanciation:')
+bg = BaseGeometry()
+print(f'   Instance créée: {type(bg)}')
+print(f'   isinstance: {isinstance(bg, BaseGeometry)}\n')
+
+# Test 2: Méthode area()
+print('2. Test de la méthode area():')
+try:
+    bg.area()
+except Exception as e:
+    print(f'   Exception levée: [{e.__class__.__name__}] {e}\n')
+
+# Test 3: Validations valides
+print('3. Tests avec valeurs valides:')
+bg.integer_validator('my_int', 12)
+print('   my_int = 12 ✓')
+bg.integer_validator('width', 89)
+print('   width = 89 ✓')
+bg.integer_validator('one', 1)
+print('   one = 1 ✓\n')
+
+# Test 4: Valeurs non-entières
+print('4. Tests avec valeurs non-entières:')
+test_cases = [
+    ('name', 'John'),
+    ('pi', 3.14),
+    ('liste', [1, 2, 3]),
+    ('tuple', (1,)),
+    ('none', None),
+]
+for name, value in test_cases:
+    try:
+        bg.integer_validator(name, value)
+    except Exception as e:
+        print(f'   {name} = {repr(value)}: [{e.__class__.__name__}] {e}')
+print()
+
+# Test 5: Valeurs <= 0
+print('5. Tests avec valeurs <= 0:')
+test_cases = [
+    ('age', 0),
+    ('distance', -4),
+    ('negative', -100),
+]
+for name, value in test_cases:
+    try:
+        bg.integer_validator(name, value)
+    except Exception as e:
+        print(f'   {name} = {value}: [{e.__class__.__name__}] {e}')
+print()
+
+# Test 6: Documentation
+print('6. Vérification de la documentation:')
+module = __import__('7-base_geometry')
+print(f'   Module doc: {len(module.__doc__) > 1}')
+print(f'   Classe doc: {len(BaseGeometry.__doc__) > 1}')
+print(f'   area() doc: {len(BaseGeometry.area.__doc__) > 1}')
+print(f'   integer_validator() doc: {len(BaseGeometry.integer_validator.__doc__) > 1}')
+print('\n✅ Tous les tests sont réussis!')

@@ -63,6 +63,9 @@ HTTP/1.1 200 OK
           <body><h1>Bonjour !</h1></body>
         </html>
 
+
+3.Exploration des méthodes HTTP et des codes d'état
+
 Une liste des méthodes HTTP et des codes d'état courants, 
 avec leur description et leurs cas d'utilisation possibles. 
 

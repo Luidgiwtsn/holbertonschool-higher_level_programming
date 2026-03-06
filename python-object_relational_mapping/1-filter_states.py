@@ -26,7 +26,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Exécution de la requête SQL
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
 
     # Récupération de tous les résultats
     rows = cursor.fetchall()

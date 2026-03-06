@@ -9,13 +9,16 @@ from sqlalchemy import (create_engine)
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
-    Base.metadata.create_all(engine)
+
     
 
     Session = sessionmaker(bind=engine) # crée une fabrique de sessions
     session = Session() # ouvre la session (comme un curseur)
 
     state = session.query(State).order_by(State.id).first() # SELECT * FROM states ORDER BY id ASC .first() → retourne uniquement le premier objet 
-    print("{}: {}".format(state.id, state.name))
+    if state is None:
+        print("Nothing")
+    else:
+        print("{}: {}".format(state.id, state.name))
 
     session.close()

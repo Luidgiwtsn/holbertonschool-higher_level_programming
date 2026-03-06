@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 script that  lists all cities from the database hbtn_0e_4_usa
 Usage: ./2-my_filter_states.py <mysql_username> <mysql_password> <database_name> 

@@ -1,0 +1,88 @@
+Differentiating HTTP and HTTPS of HTTP/HTTPS
+
+1. Différences entre HTTP et HTTPS
+HTTP (HyperText Transfer Protocol) et HTTPS (HTTP Secure) 
+sont tous deux des protocoles de communication utilisés pour transférer des données entre un navigateur et un serveur web.
+ HTTP, c'est comme envoyer une carte postale tout le monde peut lire le message. 
+ HTTPS, c'est comme une lettre dans une enveloppe scellée et codée.
+
+HTTP (HyperText Transfer Protocol)
+
+HTTP est le protocole fondamental du Web. Il définit comment les messages sont formatés et transmis entre un client (navigateur) et un serveur.
+Problème majeur : les données transitent en texte clair. N'importe qui interceptant le trafic peut lire le contenu intégralement.
+Port par defaut:80 / Chiffrement:aucun / Confidentialité:données lisible / Intégrité:modifiable
+Authentification:absente / Vitesse: legèrement plus rapide / Usage:Sites statiques, locaux
+
+HTTPS (HTTP Secure)
+
+HTTPS est simplement HTTP auquel on ajoute une couche de chiffrement via TLS 
+(Transport Layer Security), anciennement SSL. Le "S" signifie Secure.
+Port par default:443 /chiffrement:TLS/SSL / Confidentialité:données chiffrées / Intégrité:protégée
+Authentification:via certificat / Vitesse:légerment plus lent / Usage:banque, e-commerce, tout site moderne
+
+
+2.Comprendre la structure HTTP :
+
+Requête HTTP (Client → Serveur)
+GET /index.html HTTP/1.1
+├── Ligne de requête ──────────────────────────────────────
+│   ├── Méthode    : GET
+│   ├── Chemin     : /index.html
+│   └── Version    : HTTP/1.1
+│
+├── En-têtes (Headers) ────────────────────────────────────
+│   ├── Host            : www.exemple.com
+│   ├── Accept          : text/html, application/json
+│   ├── Accept-Language : fr-FR, fr;q=0.9
+│   ├── User-Agent      : Mozilla/5.0 (Windows NT 10.0)
+│   ├── Authorization   : Bearer <token>        ← si auth requise
+│   └── Cookie          : session_id=abc123
+│
+└── Corps (Body) ──────────────────────────────────────────
+    └── (vide pour GET, contient les données pour POST/PUT)
+
+Réponse HTTP (Serveur → Client)
+HTTP/1.1 200 OK
+├── Ligne de statut ────────────────────────────────────────
+│   ├── Version HTTP : HTTP/1.1
+│   ├── Code statut  : 200
+│   └── Message      : OK
+│
+├── En-têtes (Headers) ─────────────────────────────────────
+│   ├── Content-Type     : text/html; charset=UTF-8
+│   ├── Content-Length   : 3456
+│   ├── Date             : Tue, 17 Feb 2026 10:00:00 GMT
+│   ├── Server           : Apache/2.4.41
+│   ├── Cache-Control    : max-age=3600
+│   └── Set-Cookie       : session_id=xyz789; HttpOnly
+│
+└── Corps (Body) ───────────────────────────────────────────
+    └── <!DOCTYPE html>
+        <html>
+          <head><title>Exemple</title></head>
+          <body><h1>Bonjour !</h1></body>
+        </html>
+
+
+3.Exploration des méthodes HTTP et des codes d'état
+
+Une liste des méthodes HTTP et des codes d'état courants, 
+avec leur description et leurs cas d'utilisation possibles. 
+
+METHODE HTTP
+GET:récupère des données sans les modifier / Charger une page web, consulter un profil
+POST:Envoie des données pour créer une ressource / Soumettre un formulaire, créer un compte
+PUT:Remplace entièrement une ressource existante / Mettre à jour un profil utilisateur complet
+PATCH:Modifie partiellement une ressource / Changer uniquement son mot de passe
+DELETE:Supprime une ressource / Supprimer un commentaire ou un fichier
+
+CODES D'ETAT COURANTS 
+200:OK / Requête réussie / Une page web se charge normalement
+201:Created / Ressource créée avec succès / Un nouveau compte vient d'être créé
+301:Moved Permanently / Redirection permanente / Un site migre de HTTP vers HTTPS
+400:Bad Request / Requête invalide ou mal formée / Formulaire soumis avec des données incorrectes
+401:Unauthorized / Authentification requise / Accès à son compte sans être connecté
+403:Forbidden / Accès refusé / Un utilisateur tente d'accéder à une page admin
+404:Not Found / Ressource introuvable / URL incorrecte ou page supprimée
+500:Internal Server Error / Erreur côté serveur / Un bug dans le code du serveur
+503:Service Unavailable / Serveur temporairement indisponible / Site en maintenance
